@@ -38,4 +38,15 @@ describe('Reducer', () => {
     expect(newState.auralStatus).toEqual('');
     expect(newState.feedback).toEqual('Make your guess!');
   });
+  it('should return the input state on unknown actions', () => {
+    const state = {
+      guesses: [],
+      feedback: 'New feedback'
+    };
+    const action = {
+      type: 'THISisANactionTYPEthatISnotUSEDinMYcode'
+    };
+    const newState = reducer(state, action);
+    expect(newState).toBe(state);
+  })
 });
