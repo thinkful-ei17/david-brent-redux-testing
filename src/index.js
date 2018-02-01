@@ -13,5 +13,5 @@ ReactDOM.render(
   <Provider store={store}>
     <Game />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

@@ -8,7 +8,6 @@ import './guess-form.css';
 export class GuessForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
-
     const value = this.input.value;
     this.props.dispatch(makeGuess(value));
     this.input.value = '';
@@ -27,10 +26,10 @@ export class GuessForm extends React.Component {
           max="100"
           autoComplete="off"
           aria-labelledby="feedback"
-          ref={input => (this.input = input)}
+          ref={(input) => { this.input = input; }}
           required
         />
-        <button 
+        <button
           type="submit"
           name="submit"
           id="guessButton" 
