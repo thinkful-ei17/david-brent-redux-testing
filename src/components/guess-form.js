@@ -32,7 +32,7 @@ export class GuessForm extends React.Component {
         <button
           type="submit"
           name="submit"
-          id="guessButton" 
+          id="guessButton"
           className="button"
         >
           Guess

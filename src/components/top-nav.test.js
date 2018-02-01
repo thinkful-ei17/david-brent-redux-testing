@@ -12,9 +12,8 @@ describe('TopNav component', () => {
     shallow(<TopNav />);
   });
   it('Should dispatch restartGame on click', () => {
-    const correctNumber = 32;
     const dispatch = jest.fn();
-    const wrapper = mount(<TopNav  dispatch={dispatch} />);
+    const wrapper = mount(<TopNav dispatch={dispatch} />);
     const link = wrapper.find('.new');
     link.simulate('click');
     expect(dispatch).toHaveBeenCalledWith(restartGame(expect.any(Number)));
